@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+
+        <title>Presentazioni Grafiche</title>
+        <link rel="stylesheet" href="./style.css">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+
+        <video id="video1" autoplay loop>
+            <source src="./loop360wimage.mp4" type="video/mp4">
+        </video>
+
+        <video id="video2">
+            <source src="./PostClickWimageLoop.mp4" type="video/mp4">
+        </video>
+
+
+        <script>
+            const video1 = document.getElementById('video1');
+            const video2 = document.getElementById('video2');
+
+            video1.addEventListener( 'click' , function(){
+                video1.style.display = 'none';
+                video2.style.display = 'block';
+                video2.play();
+            });
+
+            video1.addEventListener( 'load' , function(){
+                video1.style.display = 'block';
+                video2.style.display = 'none';
+                video1.play();
+            });
+
+            document.addEventListener( 'click' , function(){
+                video1.style.display = 'none';
+                video2.style.display = 'block';
+                video2.play();
+            });
+        </script>
+    </body>
+</html>
